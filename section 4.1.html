@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weight Loss Program Registration</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 50px;
+    padding: 0;
+    background-color: #f2f2f2;
+    background-image: url("https://img.freepik.com/premium-photo/smart-doctor-with-stethoscope-with-digital-icon-hologram-medical-graphic-diagram-laboratory-lab-hospital-background-virus-outbreak-coronavirus-covid19-technology-medical-concept_33829-671.jpg?w=1380");
+    height: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #def6ec;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+  }
+  form {
+    margin-top: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+<div>
+<div class="container">
+
+  <h2>Weight Loss Program Registration</h2>
+  <form>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" required>
+    
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    
+    <label for="height">Height (in cm):</label>
+    <input type="number" id="height" name="height" required>
+    
+    <label for="weight">Weight (in kg):</label>
+    <input type="number" id="weight" name="weight" required>
+    
+    <input type="submit" value="Register">
+  </form>
+</div>
+</div>
+</body>
+</html>

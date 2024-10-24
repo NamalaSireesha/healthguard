@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vital Signs and Alerts</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 60px;
+    padding: 0;
+    background-color: #a7e1ed;
+    background-image: url("https://img.freepik.com/premium-photo/smart-doctor-with-stethoscope-with-digital-icon-hologram-medical-graphic-diagram-laboratory-lab-hospital-background-virus-outbreak-coronavirus-covid19-technology-medical-concept_33829-671.jpg?w=1380");
+    height: 600px;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .container {
+    height: 320px;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #d8eff4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1, h2 {
+    text-align: center;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+</style>
+</head>
+<body>
+  <div class="bgm">
+<div class="container">
+
+  <h1>Vital Signs and Alerts</h1>
+  <p>Enter patient ID to monitor vital signs and grant permission to receive alerts in real time</p>
+
+  <label for="ID">Enter Patient ID</label>
+  <input type="ID" id="ID" name="ID"><br><br>
+
+  <button type="submit" onclick="location.href='section%203.1.1.html'">Submit</button>
+    <button type="reset" onclick="Reset">Reset</button>
+    <button type="button" onclick="cancelForm()">Cancel</button>
+  
+    
+    
+    <!-- Add more program options as needed -->
+  </div>
+  <script>
+    // Function to cancel form submission
+    function cancelForm() {
+      // You can implement the action you want here, such as redirecting to another page or showing a confirmation message.
+      alert('Form submission cancelled.');
+    }
+  </script>
+  
+  
+</div>
+</div>

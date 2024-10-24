@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remote Patient Monitoring - Health Guard</title>
+<style>
+
+  body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    background-image: url("https://img.freepik.com/premium-photo/smart-doctor-with-stethoscope-with-digital-icon-hologram-medical-graphic-diagram-laboratory-lab-hospital-background-virus-outbreak-coronavirus-covid19-technology-medical-concept_33829-671.jpg?w=1380");
+    height: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #def6ec;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(49, 30, 30, 0.1);
+  }
+  h1, h2, h3 {
+    color: #007bff;
+  }
+  p {
+    line-height: 1.6;
+  }
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  .button-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  .button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+  <div>
+<div class="container">
+
+  <h1>Remote Patient Monitoring</h1>
+  
+  <h2>Patient Information</h2>
+  <label for="patientName">Patient Name:</label>
+  <input type="text" id="patientName" name="patientName">
+  
+  <label for="patientID">Patient ID:</label>
+  <input type="text" id="patientID" name="patientID">
+  
+  <h2>Control Options for Vital Signs</h2>
+  <label for="heartRate">Heart Rate (bpm):</label>
+  <input type="number" id="heartRate" name="heartRate" min="30" max="200">
+  
+  <label for="bloodPressure">Blood Pressure (mmHg):</label>
+  <input type="text" id="bloodPressure" name="bloodPressure">
+  
+  <label for="oxygenLevel">Oxygen Level (%):</label>
+  <input type="number" id="oxygenLevel" name="oxygenLevel" min="0" max="100">
+  
+  <label for="bodyTemperature">Body Temperature (°C):</label>
+  <input type="number" id="bodyTemperature" name="bodyTemperature" step="0.1">
+  
+  <label for="medication">Medication:</label>
+  <select id="medication" name="medication">
+    <option value="none">None</option>
+    <option value="aspirin">Aspirin</option>
+    <option value="ibuprofen">Ibuprofen</option>
+    <option value="paracetamol">Paracetamol</option>
+  </select>
+  
+  <label for="notes">Notes:</label>
+  <textarea id="notes" name="notes" rows="4"></textarea>
+  
+  <div class="button-container">
+    <button class="button" onclick="submitData()">Submit</button>
+    <button class="button" onclick="resetForm()">Reset</button>
+    <button class="button" onclick="cancelForm()">Cancel</button>
+  </div>
+</div>
+</div>
+
+<script>
+  function submitData() {
+    let patientName = document.getElementById('patientName').value;
+    let patientID = document.getElementById('patientID').value;
+    let heartRate = document.getElementById('heartRate').value;
+    let bloodPressure = document.getElementById('bloodPressure').value;
+    let oxygenLevel = document.getElementById('oxygenLevel').value;
+    let bodyTemperature = document.getElementById('bodyTemperature').value;
+    let medication = document.getElementById('medication').value;
+    let notes = document.getElementById('notes').value;
+    
+    // Here you can send the data to the server or display it on the page
+    console.log("Patient Name:", patientName);
+    console.log("Patient ID:", patientID);
+    console.log("Heart Rate:", heartRate, "bpm");
+    console.log("Blood Pressure:", bloodPressure, "mmHg");
+    console.log("Oxygen Level:", oxygenLevel, "%");
+    console.log("Body Temperature:", bodyTemperature, "°C");
+    console.log("Medication:", medication);
+    console.log("Notes:", notes);
+  }
+  
+  function resetForm() {
+    document.getElementById('patientName').value = "";
+    document.getElementById('patientID').value = "";
+    document.getElementById('heartRate').value = "";
+    document.getElementById('bloodPressure').value = "";
+    document.getElementById('oxygenLevel').value = "";
+    document.getElementById('bodyTemperature').value = "";
+  }

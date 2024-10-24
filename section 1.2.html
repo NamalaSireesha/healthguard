@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Previous Health Assessment</title>
+<style>
+  .asterik{
+    color: red;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin-left:30%;
+    max-width: 600px;
+    padding: 10px;
+    text-align: center;
+    background-image: url("https://img.freepik.com/premium-photo/smart-doctor-with-stethoscope-with-digital-icon-hologram-medical-graphic-diagram-laboratory-lab-hospital-background-virus-outbreak-coronavirus-covid19-technology-medical-concept_33829-671.jpg?w=1380");
+    height: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  form {
+    text-align: left;
+    margin-top: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="date"],
+  select {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #0e0b0b;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  input[type="text"][readonly],
+  input[type="date"][readonly],
+  select[disabled] {
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+  }
+  input[type="submit"],
+  input[type="reset"],
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+  <div >
+    <div class="container">
+  <h2 class="text-center mt-2">Previous Health Assessment</h2>
+
+  <form>
+    <label for="name">Name:<span class="asterik"> *</span></label>
+    <input type="text" id="name" name="name" value="Ramu" readonly>
+
+    <label for="dob">DOB:<span class="asterik"> *</span></label>
+    <input type="date" id="dob" name="dob" max="9999-12-31" value="1995-08-23" readonly>
+
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age" value="25" readonly>
+
+    <label for="gender">Gender:<span class="asterik"> *</span></label>
+    <select id="gender" name="gender" disabled>
+      <option value="male" selected>Male</option>
+      <option value="female">Female</option>
+      <option value="other">Others</option>
+    </select>
+
+    <label for="height">Height (in cm):<span class="asterik"> *</span></label>
+    <input type="text" id="height" name="height" value="170" readonly>
+
+    <label for="weight">Weight (in kgs):<span class="asterik"> *</span></label>
+    <input type="text" id="weight" name="weight" value="76" readonly>
+
+    <label for="bmi">Body mass index:</label>
+    <input type="text" id="bmi" name="bmi" value="26.30" readonly>
+
+    <label for="breakfast">What do you eat in a day - Breakfast:<span class="asterik"> *</span></label>
+    <input type="text" id="breakfast" name="breakfast" value="pizza" readonly>
+
+    <label for="lunch">What do you eat in a day - Lunch:<span class="asterik"> *</span></label>
+    <input type="text" id="lunch" name="lunch" value="biryani" readonly>
+
+    <label for="dinner">What do you eat in a day - Dinner:<span class="asterik"> *</span></label>
+    <input type="text" id="dinner" name="dinner" value="fried rice" readonly>
+
+    <label for="allergies">Things you're allergic to:<span class="asterik"> *</span></label>
+    <input type="text" id="allergies" name="allergies" value="cucumber, fish" readonly>
+
+    <label for="medicines">Tablets/Medicines you take:<span class="asterik"> *</span></label>
+    <input type="text" id="medicines" name="medicines" value="None" readonly>
+
+    <label for="medical_history">Medical History:<span class="asterik"> *</span></label>
+    <input type="text" id="medical_history" name="medical_history" value="None" readonly>
+
+    <label for="surgical_history">Surgical History:<span class="asterik"> *</span></label>
+    <input type="text" id="surgical_history" name="surgical_history" value="None" readonly>
+
+    <label for="blood_pressure">Blood Pressure:<span class="asterik"> *</span></label>
+    <input type="text" id="blood_pressure" name="blood_pressure" value="125" readonly>
+
+    <label for="vaccination">Vaccination:<span class="asterik"> *</span></label>
+    <select id="vaccination" name="vaccination" disabled>
+      <option value="yes" >Yes</option>
+      <option value="no" selected>No</option>
+    </select>
+
+    <label for="smoker">Smoker:<span class="asterik"> *</span></label>
+    <select id="smoker" name="smoker" disabled>
+      <option value="never">Never</option>
+      <option value="left" >Left</option>
+      <option value="continuing" selected>Continuing</option>
+    </select>
+
+    <label for="tea_coffee">Tea/Coffee (#cups/day):<span class="asterik"> *</span></label>
+    <input type="number" id="tea_coffee" name="tea_coffee" min="0" style="width: 70px;" value="9" readonly>
+
+    <label for="skin_type">Skin Type:</label>
+    <select id="skin_type" name="skin_type" disabled>
+      <option value="normal">Normal Skin</option>
+      <option value="sensitive">Sensitive Skin</option>
+      <option value="oily" selected>Oily Skin</option>

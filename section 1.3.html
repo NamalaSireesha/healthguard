@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personalized Health Assessment</title>
+<style>
+  .asterik{
+    color: red;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin:50px auto;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    background-image: url("https://img.freepik.com/premium-photo/smart-doctor-with-stethoscope-with-digital-icon-hologram-medical-graphic-diagram-laboratory-lab-hospital-background-virus-outbreak-coronavirus-covid19-technology-medical-concept_33829-671.jpg?w=1380");
+    height: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  form {
+    text-align: left;
+    margin-top: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="date"],
+  select {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #0e0b0b;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  input[type="submit"],
+  input[type="reset"],
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+  <div >
+    <div class="container">
+  <h2 class="text-center mt-2">Personalised Health Assessments</h2>
+
+  <form>
+    <label for="name">Name:<span class="asterik"> *</span></label>
+    <input type="text" id="name" name="name">
+
+    <label for="dob">DOB:<span class="asterik"> *</span></label>
+    <input type="date" id="dob" name="dob" max="9999-12-31">
+
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age" readonly>
+
+    <label for="gender">Gender:<span class="asterik"> *</span></label>
+    <select id="gender" name="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Others</option>
+    </select>
+
+    <label for="height">Height (in cm):<span class="asterik"> *</span></label>
+    <input type="text" id="height" name="height">
+
+    <label for="weight">Weight (in kgs):<span class="asterik"> *</span></label>
+    <input type="text" id="weight" name="weight">
+
+    <label for="bmi">Body mass index:</label>
+    <input type="text" id="bmi" name="bmi" readonly>
+
+    <label for="breakfast">What do you eat in a day - Breakfast:<span class="asterik"> *</span></label>
+    <input type="text" id="breakfast" name="breakfast">
+
+    <label for="lunch">What do you eat in a day - Lunch:<span class="asterik"> *</span></label>
+    <input type="text" id="lunch" name="lunch">
+
+    <label for="dinner">What do you eat in a day - Dinner:<span class="asterik"> *</span></label>
+    <input type="text" id="dinner" name="dinner">
+
+    <label for="allergies">Things you're allergic to:<span class="asterik"> *</span></label>
+    <input type="text" id="allergies" name="allergies">
+
+    <label for="medicines">Tablets/Medicines you take:<span class="asterik"> *</span></label>
+    <input type="text" id="medicines" name="medicines">
+
+    <label for="medical_history">Medical History:<span class="asterik"> *</span></label>
+    <input type="text" id="medical_history" name="medical_history">
+
+    <label for="surgical_history">Surgical History:<span class="asterik"> *</span></label>
+    <input type="text" id="surgical_history" name="surgical_history">
+
+    <label for="blood_pressure">Blood Pressure:<span class="asterik"> *</span></label>
+    <input type="text" id="blood_pressure" name="blood_pressure">
+
+    <label for="vaccination">Vaccination:<span class="asterik"> *</span></label>
+    <select id="vaccination" name="vaccination">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label for="smoker">Smoker:<span class="asterik"> *</span></label>
+    <select id="smoker" name="smoker">
+      <option value="never">Never</option>
+      <option value="left">Left</option>
+      <option value="continuing">Continuing</option>
+    </select>
+
+    <label for="tea_coffee">Tea/Coffee (#cups/day):<span class="asterik"> *</span></label>
+    <input type="number" id="tea_coffee" name="tea_coffee" min="0" style="width: 70px;">
+
+    <label for="skin_type">Skin Type:</label>
+    <select id="skin_type" name="skin_type">
+      <option value="normal">Normal Skin</option>
+      <option value="sensitive">Sensitive Skin</option>
+      <option value="dry">Dry Skin</option>
+      <option value="oily">Oily Skin</option>
+      <option value="extremely_dry">Extremely Dry Skin</option>
+    </select>
+
+    <p>'<span class="asterik"> *</span> ' indicates mandatory fields.</p>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    <button type="button" onclick="cancelForm()">Cancel</button>
+  </form>
+  </div>
+</div>
+  <script>
+    // Calculate age based on date of birth
+    document.getElementById('dob').addEventListener('change', function() {
+      var dob = new Date(this.value);
+      var today = new Date();
+      var age = today.getFullYear() - dob.getFullYear();
+      var monthDiff = today.getMonth() - dob.getMonth();
+      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+        age--;
+      }
+      document.getElementById('age').value = age;
+    });
+
+    // Calculate BMI based on height and weight
+    document.getElementById('height').addEventListener('input', calculateBMI);
+    document.getElementById('weight').addEventListener('input', calculateBMI);
+
+    function calculateBMI() {
+      var height = parseFloat(document.getElementById('height').value) / 100; // Convert height to meters
+      var weight = parseFloat(document.getElementById('weight').value);
+      var bmi = (weight / (height * height)).toFixed(2);
+      document.getElementById('bmi').value = bmi;
+    }
+
+    // Function to cancel form submission
+    function cancelForm() {
+      // You can implement the action you want here, such as redirecting to another page or showing a confirmation message.
+      alert('Form submission cancelled.');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stress Management Program Registration</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin:30px;
+    padding: 0;
+    background-color: #f2f2f2;
+    background-image: url("https://img.freepik.com/premium-photo/smart-doctor-with-stethoscope-with-digital-icon-hologram-medical-graphic-diagram-laboratory-lab-hospital-background-virus-outbreak-coronavirus-covid19-technology-medical-concept_33829-671.jpg?w=1380");
+    height: 100%;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #def6ec;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+  }
+  form {
+    margin-top: 20px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+<div >
+<div class="container">
+
+  <h2>Stress Management Program Registration</h2>
+  <form>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" required>
+    
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    
+    <label for="stressors">Major Stressors (list any major sources of stress in your life):</label>
+    <textarea id="stressors" name="stressors" rows="4" required></textarea>
+    
+    <label for="stress_symptoms">Common Stress Symptoms Experienced (list any physical or emotional symptoms you often experience when stressed):</label>
+    <textarea id="stress_symptoms" name="stress_symptoms" rows="4" required></textarea>
+    
+    <label for="stress_triggers">Stress Triggers (list specific situations or events that tend to trigger your stress):</label>
+    <textarea id="stress_triggers" name="stress_triggers" rows="4" required></textarea>
+    
+    <label for="stress_management_goals">Stress Management Goals (describe what you hope to achieve through this program in terms of managing stress):</label>
+    <textarea id="stress_management_goals" name="stress_management_goals" rows="4" required></textarea>
+    
+    <label for="current_stress_management_techniques">Current Stress Management Techniques Used (describe any techniques or strategies you currently use to cope with stress):</label>
+    <textarea id="current_stress_management_techniques" name="current_stress_management_techniques" rows="4" required></textarea>
+    
+    <label for="preferred_stress_reduction_methods">Preferred Stress Reduction Methods (list any specific methods or activities you prefer for reducing stress, such as exercise, meditation, etc.):</label>
+    <textarea id="preferred_stress_reduction_methods" name="preferred_stress_reduction_methods" rows="4" required></textarea>
+    
+    <label for="stressful_situations">How Do You Handle Stressful Situations (describe your typical response to stressful situations and any coping mechanisms you rely on):</label>
+    <textarea id="stressful_situations" name="stressful_situations" rows="4" required></textarea>
+    
+    <input type="submit" value="Register">
+  </form>
+  </div>
+</div>
+
+</body>
+</html>
